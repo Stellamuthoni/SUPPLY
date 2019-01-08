@@ -88,7 +88,7 @@ class RideController extends Controller
 
  public function viewStock(){
   if(Auth::user()->role == 'null'){
-    flash('Sorry, You are not an staff')->error();
+    flash('Sorry, You are not a staff')->error();
     return Redirect::route('home');
   }
         return view('system.stock');
